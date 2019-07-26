@@ -73,7 +73,7 @@
     <div class="footer container">
       <div class="footer__line footer__line">
         <div class="footer__item footer__item--top footer__item--1">
-          <a href="" class="btn btn--yellow">Повторить попытку</a>
+          <a href="" class="btn btn--yellow" data-form="winner">Повторить попытку</a>
         </div>
         <div class="footer__item footer__item--top footer__item--3">
           <p class="footer__text footer__copyright">
@@ -84,13 +84,185 @@
           </p>
         </div>
         <div class="footer__item footer__item--top footer__item--2">
-          <a href="" class="btn btn--rounded-yellow">Играть еще!</a>
+          <a href="" class="btn btn--rounded-yellow" data-form="stil-nothing">Играть еще!</a>
         </div>
       </div>
     </div>
   </footer>
+  <div class="modal modal--winner">
+    <div class="header">
+      <a href="/"  title="Casino" class="logo">
+        <img src="../img/logo.png" alt="Casino" class="logo__img">
+      </a>
+    </div>
+    <div class="main">
+      <section class="block">
+        <div class="top-block top-block--win">
+          <div class="container">
+            <div class="top-block__content">
+              <div class="menu-icon">
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+              </div>
+      
+              <h2 class="seo seo__h2">
+                Поздравляем!
+              </h2>
+              <p class="seo seo__add">Вы виграли <strong class="accent">Cкидку!</strong></p>
+              <div class="rounded-block">
+                <p class="top-block__desc"><strong class="top-block__accent strong accent">Скидка 90% </strong></p>
+                <i class="italic top-block__accent">На посещение Семинара</i>
+                <i class="italic accent">“Как находить новых друзей”</i>
+              </div>
+              <a href="" class="btn btn--large btn--transparent">Забрать приз</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="feedback">
+          <h2 class="feedback__title">
+            Забрать приз!
+          </h2>
+          <p class="feedback__description">
+            Чтобы забрать вашу скидку, заполните, пожалуйста поля,
+            и оплатите семинар.
+          </p>
+          <form action="" class="form">
+            <form action="" class="form">
+            <div class="form__group">
+              <input type="text" class="form__input form__field" name="name" autocomplete="off" placeholder="ФИО">
+              <span class="form__warn">Введите Имя Фамилию и Отчество</span>
+            </div>
+              <div class="form__group">
+              <input type="email" class="form__input form__field" name="mail" autocomplete="off" placeholder="Email">
+              <span class="form__warn">Пожалуйста введите Ваш E-Mail</span>
+            </div>
+            <div class="form__group">
+              <input type="text" class="form__input form__field" name="city" autocomplete="off" placeholder="Город">
+              <span class="form__warn">Укажите Ваш город</span>
+            </div>
+            <p class="form__cost italic ">
+                <i class="top-block__accent">Стоимость семинара вместе со скидкой</i>
+                всего <i class="throught"> 300</i>  <i class="accent"> 125 у.е!</i>
+            </p>
+            <div class="form__btns">
+              <button class="btn btn--grey form__btn">Играть еще</button>
+              <button class="btn btn--main form__btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer class="block">
+      <div class="footer container">
+        <p class="footer__text">
+          P.S. Завтра в розыграше - новые призы,
+          проверяйте почту ежедневно!
+        </p>
+        <div class="footer__line">
+          <div class="footer__item footer__item--1">
+            <a href="" class="btn btn--main" data-form="nothing">Повторить попытку</a>
+          </div>
+          <div class="footer__item footer__item--3">
+            <div class="social">
+              <span class="social__title italic">
+                Рассказать друзьям
+              </span>
+              <div class="social__list">
+                <a href="" class="social__link" title="google" target="_blank">
+                  <img src="../img/google-plus-logo-button.png" alt="google" class="social__icon">
+                </a>
+                <a href="" class="social__link" title="facebook" target="_blank">
+                  <img src="../img/facebook-logo-button.png" alt="facebook" class="social__icon">
+                </a>
+                <a href="" class="social__link" title="twitter" target="_blank">
+                  <img src="../img/twitter-logo-button.png" alt="twitter" class="social__icon">
+                </a>
+                <a href="" class="social__link" title="instagram" target="_blank">
+                  <img src="../img/instagram-logo.png" alt="instagram" class="social__icon">
+                </a>
+                <a href="" class="social__link" title="youtube" target="_blank">
+                  <img src="../img/youtube-symbol.png" alt="youtube" class="social__icon">
+                </a>
+              </div>
+            </div>
+    
+          </div>
+          <div class="footer__item footer__item--2">
+            <a href="" class="btn" data-form="still-nothing">Играть еще!</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="modal modal--nothing">
+    <div class="header">
+      <a href="/"  title="Casino" class="logo">
+        <img src="../img/logo.png" alt="Casino" class="logo__img">
+      </a>
+    </div>
+    <div class="main">
+      <section class="block">
+        <div class="top-block top-block--nothing top-block--nothing-1">
+          <div class="container">
+            <div class="top-block__content">
+              <div class="menu-icon">
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+              </div>
+      
+              <h2 class="seo seo__h2 seo__h2--small">
+                Cегодня вы ничего не выиграли.
+              </h2>
+              <div class="rounded-block rounded-block--img">
+                <img src="../img/nothing-card.png" alt="" class="rounded-block__img">
+                <p class="top-block__desc top-block__desc--small">Количество попыток на сегодня закончилось.
+      Но не отчаивайтесь!</p>
+                <i class="italic top-block__accent">Попробуйте завтра ещё —</i>
+                <i class="italic accent">и Вам улыбнется удача.</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="modal modal--still-nothing">
+    <div class="header">
+      <a href="/"  title="Casino" class="logo">
+        <img src="../img/logo.png" alt="Casino" class="logo__img">
+      </a>
+    </div>
+    <div class="main">
+      <section class="block">
+        <div class="top-block top-block--nothing">
+          <div class="container">
+            <div class="top-block__content">
+              <div class="menu-icon">
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line"></span>
+              </div>
+      
+              <h2 class="seo seo__h2 seo__h2--small">
+                Cегодня вы ничего не выиграли.
+              </h2>
+              <div class="rounded-block">
+                <p class="top-block__desc top-block__desc--small">Количество попыток на сегодня закончилось.
+      Но не отчаивайтесь!</p>
+                <i class="italic top-block__accent">Попробуйте завтра ещё —</i>
+                <i class="italic accent">“Как находить новых друзей”</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
   <script src="js/main.min.js"></script>
-
 </body>
 
 </html>
