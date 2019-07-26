@@ -1,0 +1,49 @@
+.siiimpleToast {
+  position: absolute;
+  box-sizing: border-box;
+  padding: rem(14) rem(18);
+  min-width: rem(250);
+  min-width: rem(280);
+  @media (min-width: 375px) {
+    max-width: rem(320);
+  }  
+  @media (min-width: 769px) {
+    max-width: rem(360);
+  }
+  
+  z-index: 999999;
+  border-radius: 4px;
+  color: $white;
+  user-select: none;
+  opacity: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  transform: scale(0.5);
+  transition: all 0.4s ease-out;
+  font-family: $font;
+  font-size: rem(14);
+  line-height: rem(20);
+  padding-right: rem(32);
+  &:after {
+    font-family: $font-bold;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    content: '!';
+    font-size: rem(70);
+    font-weight: 700;
+    color: $white;
+  }
+
+  &[data-state="default"] {
+    background-color: rgba(#323232, .95);
+  }
+
+  &[data-state="success"] {
+    background-color: rgba(#8BC34A, .95);
+  }
+
+  &[data-state="alert"] {
+    background-color: rgba($accent, .95);
+  }
+}

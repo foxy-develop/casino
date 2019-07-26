@@ -1,0 +1,112 @@
+@mixin transform($rules...) {
+    -webkit-transform: $rules;
+    -moz-transform: $rules;
+    -ms-transform: $rules;
+    -o-transform: $rules;
+    transform: $rules;
+}
+
+@mixin transition($rules...) {
+    -webkit-transition: $rules;
+    -moz-transition: $rules;
+    transition: $rules;
+}
+
+@mixin box-shadow($params...) {
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+    box-shadow: $params;
+}
+
+$duration: 0.3s;
+
+.modal {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $grey;
+  display: none;
+  flex-direction: column;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  z-index: 100;
+  transform:scale(0) translateY(50%);
+  background: $grey;
+  &.open {
+    display: flex;
+    opacity: 1;
+    transform:scaleY(.01) scaleX(0) translateY(50%);
+    animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    .modal-window {
+      transform:scale(0) translateY(50%);
+      animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      opacity: 1;
+    }
+  }
+  &.close {
+    transform:scale(1);
+    animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    .modal-window {
+      animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+  }
+}
+
+.modal-window {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: $white;
+  overflow: auto;
+  opacity: 0;
+}
+
+
+
+@keyframes unfoldIn {
+  0% {
+    transform:scaleY(.002) scaleX(0) translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    transform:scaleY(.002) scaleX(1) translateY(0%);
+    opacity: .1;
+  }
+  100% {
+    transform:scaleY(1) scaleX(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform:scaleY(1) scaleX(1);
+  }
+  50% {
+    transform:scaleY(.005) scaleX(1);
+  }
+  100% {
+    transform:scaleY(.005) scaleX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background:rgba(0,0,0,.0);
+  }
+  100% {
+    background:rgba(0,0,0,.7);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background:rgba(0,0,0,.7);
+  }
+  100% {
+    background:rgba(0,0,0,.0);
+  }
+}

@@ -1,0 +1,81 @@
+.btn {
+  font-family: $font;
+  border: 2px solid transparent;
+  font-style: italic;
+  border-radius: rem(30);
+  transition: $hover-transition;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.5;
+  font-size: rem(18);
+  color: $accent;
+  background-color: $light;
+  box-shadow: 0 10px 16px rgba($dark, 0.15);
+  padding: .5rem 2.6rem;
+  width: 100%;
+  max-width: 245px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    background-color: $light;
+    box-shadow: 0 10px 16px rgba($dark, 0.25);
+  }  
+  &--main {
+    color: $light;
+    border-color: $accent;
+    background-color: $accent;
+    box-shadow: 0 10px 16px rgba($accent, 0.15);
+    &:hover {
+      background-color: lighten($accent,5%);
+      border-color: lighten($accent,5%);
+      box-shadow: 0 10px 16px rgba($accent, 0.35);
+    }
+  }
+  &--grey {
+    background-color: #b7b7b7;
+    color: $dark;
+    &:hover {
+      background-color: rgba(#b7b7b7, .8) 
+    }
+  }
+  &--large {
+    font-style: normal;
+    max-width: 362px;
+    font-size: rem(28);
+    padding: rem(10);
+    &:hover {
+      color: $accent;
+      background-color: $light;
+    }
+  }
+  &--transparent {
+    color: $dark;
+    background: transparent;
+    border-color: $accent;
+    &:hover {
+      background-color: $accent;
+      color: $light;
+    }
+  }
+  &--yellow {
+    color: $dark;
+    background: #fde389;
+    border-color: #fde389;
+    box-shadow: none;
+    &:hover {
+      color: $dark;
+      background: #fde389;
+    }
+  }
+  &--rounded-yellow {
+    color: $dark;
+    background: transparent;
+    border-color: #fde389;
+    box-shadow: none;
+    &:hover {
+      color: $dark;
+      background: #fde389;
+    }    
+  }
+
+}

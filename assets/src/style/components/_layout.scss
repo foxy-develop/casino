@@ -1,0 +1,39 @@
+.main {
+  flex-direction: column;
+}
+.header {
+  align-items: center;
+  justify-content: center;
+  height: rem(126);
+  background: $white;
+  padding-bottom: 1rem;
+}
+
+.block {
+  background: $main;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  &:before {
+    content: '';
+    width: 100%;
+    height: rem(10);
+    background: url(../../img/pattern-line.png);
+    background-repeat: repeat-x;
+    background-position-x: 0;
+    background-size: auto;
+    position: absolute;
+    top: rem(-10);
+    z-index: 1;
+  }
+}
+
+.container {
+  @include flex(row, unset, unset);
+  max-width: $container-width;
+  width: 100%;
+  padding: 0 $gutter;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

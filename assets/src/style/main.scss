@@ -1,0 +1,31 @@
+// Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
+@import 'variables';
+
+// Подключение стилей сброса
+@import 'reset';
+
+// Подключение шрифтов
+@import 'fonts';
+
+// Подключение стилей сторонних библиотек
+@import 'vendor/toast';
+
+// Подключение своих SCSS файлов
+@import 'global';
+
+//layout
+@import 'components/layout';
+
+
+//typography
+@import 'components/typography';
+//blocks
+@import 'components/buttons';
+@import 'components/logo';
+@import 'components/top-block';
+@import 'components/slot';
+@import 'components/footer';
+@import 'components/social';
+@import 'components/form';
+@import 'components/hamburger';
+@import 'components/modal';

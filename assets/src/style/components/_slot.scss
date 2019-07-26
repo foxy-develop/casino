@@ -1,0 +1,66 @@
+.slot {
+  padding:rem(40) rem(15);
+  flex-direction: column;
+  background: $grey; 
+  justify-content: center;
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__slot {
+    position: relative;
+    max-width: 735px;
+    margin-bottom: 4rem;
+
+    &:hover {
+      &:after {
+        color: $accent;
+      }
+      cursor: pointer;
+    }
+    &--active {
+      &:before {
+        transform: rotateX(180deg);
+      }
+    }
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      height: rem(310);
+      width: rem(61);
+      display: none;
+      transition: $hover-transition;
+      left: 100%;
+      @media screen and (min-width: 864px) {
+        display: block;
+      }      
+    }
+    &:after {
+      background: url(../../img/handler.png);
+      background-position-y: rem(105);
+      background-repeat: no-repeat;
+      padding-left: 6.5rem;
+      font-family: $font;
+      color: #7c7e81;
+      font-style: italic;
+      font-size: rem(16);
+      line-height: 1.5;
+      @media screen and (min-width: 1024px) {
+        content: 'Крутить рулетку!';
+      }            
+    }
+    &:before {
+      background: url(../../img/hands.png) no-repeat;
+      background-position-y: 3.5rem;
+      left: calc(100% + 2.2rem);   
+    }    
+  }
+  &__main {
+    justify-content: center;
+    padding: 0;
+
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+}

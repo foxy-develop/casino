@@ -1,0 +1,66 @@
+$icon-width: 30px;
+$icon-line-height: 3px;
+$icon-line-color: $white;
+$icon-line-color-hover: $accent;
+$icon-lines-indent: 4px;
+
+.menu-icon {
+  width: $icon-width;
+  cursor: pointer;
+  transition: all .3s ease;
+  display: block;
+  position: absolute;
+  top: 2rem;
+  @media screen and (min-width: 375px) {
+    top: 6rem;
+  }
+  right: 0;
+   
+  &__line {
+    background-color: $icon-line-color;
+    height: $icon-line-height;
+    width: 100%;
+    display: block;
+    margin-bottom: $icon-lines-indent;
+    transition: all .3s ease;
+    position: relative;
+    &:first-child {
+       transform: rotate(-45deg) translateY(300%);
+     }
+
+     &:nth-child(2) {
+       opacity: 0;
+       transform: scaleX(0);
+     }
+     &:last-child {
+       transform: rotate(45deg) translateY(-300%);
+     }
+  }
+  
+  &:hover {
+    transform: rotate(-180deg);
+    .menu-icon__line {
+      background-color: $icon-line-color-hover;
+      &:before,
+      &:after {
+        background-color: $icon-line-color-hover;
+        transition: all .3s ease;
+      }
+      &:first-child,
+      &:last-child {
+        width: 50%;
+      }
+      &:nth-child(2) {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+      &:first-child {
+        transform: rotate(-45deg) translateX(-$icon-line-height);
+      }
+      
+      &:last-child {
+        transform: rotate(45deg) translateX(-$icon-line-height);
+      }
+    }
+  }
+}

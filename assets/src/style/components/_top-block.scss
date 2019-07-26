@@ -1,0 +1,158 @@
+.top-block {
+  .container {
+    flex-direction: column;
+  }
+  background: url(../../img/confity.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
+  padding-left: rem(15);
+  padding-right: rem(15);
+  margin-top: -1rem;
+  align-items: center;
+  justify-content: center;
+  max-width: rem(1900);
+  text-align: center;
+  line-height: 1.5;
+  box-sizing: border-box;
+  &__content {
+    background: linear-gradient(90deg,rgba(0,0,0,0),rgba(255,255,255,.6) 25%,rgba(255,255,255,.8),rgba(255,255,255,.6) 75%,rgba(0,0,0,0));
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: rem(792);
+    padding: rem(50) 0;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      padding: rem(50) rem(30);
+    }       
+    margin: 0 auto;
+  }
+  border-bottom: 1px solid $main;
+  &__desc {
+    text-transform: uppercase;
+    font-size: rem(24);
+    position: relative;
+    margin-bottom: rem(60);
+    &--small {
+      font-size: rem(18);
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      background: url(../../img/crown.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 5.2rem;
+      top: 100%;
+      left: 0;
+    }
+  }
+  &__ps {
+    font-size: rem(20);
+    margin-bottom: rem(40);
+  }
+  &__accent {
+    display: block;
+  }
+  
+  &--win {
+    background: url(../../img/win-bg.png) center no-repeat fixed, 
+      url(../../img/prize.png) center bottom/contain no-repeat, 
+      linear-gradient(90deg,rgba(0,0,0,0) 35%,rgba(255,255,255,.35) 45%,rgba(255,255,255,.75) 50%,rgba(255,255,255,.35) 55%, rgba(0,0,0,0) 65%);
+    position: relative;
+    height: 100rem;
+    height: 70rem;
+    padding: 0;
+    @media screen and (min-width: 375px) {
+      height: 75rem;
+    }  
+    @media screen and (min-width: 768px) {
+      height: 90rem;
+    }  
+    @media screen and (min-width: 1200px) {
+      height: 100rem;
+    }    
+    @media screen and (min-width: 1440px) {
+      height: 110rem;
+    }
+    justify-content: unset;
+    align-items: unset;
+    border-bottom: none;
+    .top-block__content {
+      background: none;
+    }
+
+  }
+  
+  &__prize {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+ &--nothing {
+    background: url(../../img/nothing.png) center bottom no-repeat, url(../../img/nothing-bg.png) center top no-repeat;
+    position: relative;
+    margin-top: -13rem;
+    padding-top: 13rem;
+    justify-content: unset;
+    align-items: unset;
+    border-bottom: none;
+    padding-bottom: 25rem;
+    &-1 {
+      background: url(../../img/nothing-bg.png) center top no-repeat;
+      background-position-y: -5rem;
+      padding-bottom: 5rem;
+      @media screen and (min-width: 375px) {
+        padding-bottom: 15rem;
+      }
+    }
+    .top-block__content {
+      background: none;
+    }
+  }
+  
+  &__prize {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+}
+
+.rounded-block {
+  flex-direction: column;
+  padding: rem(40) rem(20);
+  border-radius: 30px;
+  background: $white; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: rem(24);
+  max-width: 626px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+
+  &--img {
+    display: block;
+    @media screen and (min-width: 768px) {
+      padding: 4rem 6rem;
+      text-align: left;
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    position: relative;
+    right: -3rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      float: left;
+      right: 0;
+    }
+  }
+}
+

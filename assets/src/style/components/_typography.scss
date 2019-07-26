@@ -1,0 +1,55 @@
+.h1 {
+  font-size: rem(40);
+  font-family: $font;
+  line-height: 1.5;
+  margin-bottom: rem(40);
+}
+
+.seo {
+  font-family: $font;
+  line-height: 1;
+  &__h2 {
+   font-size: rem(32);
+   @media screen and (min-width: 320px) {
+     font-size: rem(40);
+   }
+   @media screen and (min-width: 768px) {
+     font-size: rem(64);
+   }   
+   &--small {
+     font-size: rem(36);
+     margin: 4rem 0;
+   }
+  }
+  &__add {
+    font-size: rem(22);
+    @media screen and (min-width: 320px) {
+      font-size: rem(24);
+      letter-spacing: 0;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: rem(40);
+    }       
+    letter-spacing: 2.2px;
+    margin-bottom: 2.5rem;
+  }
+}
+.strong {
+  font-weight: 600;
+}
+.strongest {
+  font-weight: 900;
+}
+.italic {
+  font-style: italic;
+}
+.accent {
+  color: $accent;
+}
+.through {
+  text-decoration: line-through;
+}
+.text {
+  font-size: rem(18);
+  line-height: 1.5;
+}

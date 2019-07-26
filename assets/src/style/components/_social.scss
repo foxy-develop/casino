@@ -1,0 +1,20 @@
+.social {
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  &__list {
+    justify-content: center;
+  }
+  &__title {
+    font-size: rem(16);
+    margin-bottom: .5rem;
+  }
+  &__link {
+    padding: rem(5);
+  }
+  &__icon {
+    position: relative;
+    width: rem(40);
+    height: rem(41);
+  }
+}
