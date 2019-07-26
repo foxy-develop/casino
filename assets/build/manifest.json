@@ -1,9 +1,9 @@
 {
-  "name": "Smart Roadster",
-  "short_name": "Smart",
+  "name": "Casino",
+  "short_name": "casino",
   "start_url": "/",
-  "theme_color": "#e82127",
-  "background_color": "#000",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "fullscreen",
   "orientation": "portrait",
   "icons": [

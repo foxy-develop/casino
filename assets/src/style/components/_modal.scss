@@ -27,15 +27,14 @@ $duration: 0.3s;
   left: 0;
   width: 100%;
   height: 100%;
-  background: $grey;
+  background: rgba(#000, 0.7);
   display: none;
   flex-direction: column;
   overflow-y: scroll;
   overscroll-behavior-y: none;
   z-index: 100;
   transform:scale(0) translateY(50%);
-  background: $grey;
-  &.open {
+  &--open {
     display: flex;
     opacity: 1;
     transform:scaleY(.01) scaleX(0) translateY(50%);
@@ -46,7 +45,7 @@ $duration: 0.3s;
       opacity: 1;
     }
   }
-  &.close {
+  &--close {
     transform:scale(1);
     animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     .modal-window {

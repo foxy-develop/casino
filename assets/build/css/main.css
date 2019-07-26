@@ -359,7 +359,7 @@ body {
   content: '';
   width: 100%;
   height: 1rem;
-  background: url(../../img/pattern-line.png);
+  background: url(../../img/pattern-line.png) transparent;
   background-repeat: repeat-x;
   background-position-x: 0;
   background-size: auto;
@@ -385,6 +385,9 @@ body {
   padding: 0 1.5rem;
   margin: 0 auto;
   box-sizing: border-box
+}
+.section {
+  background: #ebebeb
 }
 .h1 {
   font-size: 4rem;
@@ -1139,7 +1142,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ebebeb;
+  background: rgba(0,0,0,.7);
   display: none;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1148,10 +1151,9 @@ body {
   overscroll-behavior-y: none;
   z-index: 100;
   -webkit-transform: scale(0) translateY(50%);
-  transform: scale(0) translateY(50%);
-  background: #ebebeb
+  transform: scale(0) translateY(50%)
 }
-.modal.open {
+.modal--open {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1161,20 +1163,20 @@ body {
   -webkit-animation: unfoldIn 1s cubic-bezier(.165,.84,.44,1) forwards;
   animation: unfoldIn 1s cubic-bezier(.165,.84,.44,1) forwards
 }
-.modal.open .modal-window {
+.modal--open .modal-window {
   -webkit-transform: scale(0) translateY(50%);
   transform: scale(0) translateY(50%);
   -webkit-animation: zoomIn .5s .8s cubic-bezier(.165,.84,.44,1) forwards;
   animation: zoomIn .5s .8s cubic-bezier(.165,.84,.44,1) forwards;
   opacity: 1
 }
-.modal.close {
+.modal--close {
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-animation: unfoldOut 1s .3s cubic-bezier(.165,.84,.44,1) forwards;
   animation: unfoldOut 1s .3s cubic-bezier(.165,.84,.44,1) forwards
 }
-.modal.close .modal-window {
+.modal--close .modal-window {
   -webkit-animation: zoomOut .5s cubic-bezier(.165,.84,.44,1) forwards;
   animation: zoomOut .5s cubic-bezier(.165,.84,.44,1) forwards
 }
