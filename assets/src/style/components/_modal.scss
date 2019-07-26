@@ -21,19 +21,30 @@
 $duration: 0.3s;
 
 .modal {
+
   opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  min-height: 100%;
   background: rgba(#000, 0.7);
   display: none;
   flex-direction: column;
   overflow-y: scroll;
   overscroll-behavior-y: none;
+  scroll-behavior: smooth;  
+  overflow-x: hidden;
   z-index: 100;
   transform:scale(0) translateY(50%);
+  &__content {
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    min-height: 100%;
+  }
   &--open {
     display: flex;
     opacity: 1;

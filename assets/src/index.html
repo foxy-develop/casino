@@ -11,26 +11,32 @@
         </main>
         //= template/footer.html
         <div class="modal modal--winner">
-            //= template/header.html
-            <div class="main">
-                //= template/top-block-win.html
-                //= template/form.html
+            <div class="modal__content">
+                //= template/header.html
+                <div class="main">
+                    //= template/top-block-win.html
+                    //= template/form.html
+                </div>
+                //= template/footer.html
             </div>
-            //= template/footer.html
         </div>
         <div class="modal modal--nothing">
-            //= template/header.html
-            <div class="main">
-                //= template/top-block-nothing--first.html
+            <div class="modal__content">
+                //= template/header.html
+                <div class="main">
+                    //= template/top-block-nothing--first.html
+                </div>
             </div>
         </div>
         <div class="modal modal--still-nothing">
-            //= template/header.html
-            <div class="main">
-                //= template/top-block.html
-                //= template/slot.html
+            <div class="modal__content">
+                //= template/header.html
+                <div class="main">
+                    //= template/top-block.html
+                    //= template/slot.html
+                </div>
+                //= template/footer2.html
             </div>
-            //= template/footer2.html
         </div>
         <script src="js/main.min.js"></script>
     </body>
